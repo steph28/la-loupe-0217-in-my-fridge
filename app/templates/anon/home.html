@@ -1,7 +1,85 @@
 <div class="container-fluid home">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6"></div>
-        <div class="col-md-3"></div>
+  <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6"></div>
+          <div class="col-md-3"></div>
+  </div>
+    <div class="container-fluid">
+
+
+        <form>
+            <div class="form-group">
+                <input class="col-md-offset-4 col-md-6" ng-model type="text" class="form-control" placeholder="Choose your ingredients">
+                <div ng-repeat="recipeInRecipes">{{}}</div>
+
+            </div>
+            <button type="submit" ng-click="openRecipes()" class="btn btn-primary">Submit</button>
+
+        </form>
+        <div class="row" id="fridge">
+            <div class="col-md-3" id="categories">
+
+                <h2>Category</h2>
+
+                <ul class="icones-top">
+                    <li>
+                        <a href="icone milk .jpg" ng-model="dairy" </a></li>
+                    <li>
+                        <a href="icone viande .jpg" ng-model="meats" </a></li>
+                    <li>
+                        <a href="icone fish .jpg" ng-model="fish" </a></li>
+                </ul>
+
+                <ul class="title-top">
+                    <li>
+                        <dairy</li>
+                            <li>
+                                <meats</li>
+                                    <li>
+                                        <fish</li>
+                </ul>
+
+                <ul class="icones-bottom">
+                    <li>
+                        <a href="icone strawberry .jpg" ng-model="fruits" </a></li>
+                    <li>
+                        <a href="icone pepper .jpg" ng-model="spices" </a></li>
+                    <li>
+                        <a href="icone tomatoes .jpg" ng-model="vegetables" </a></li>
+                </ul>
+
+                <ul class="title-bottom">
+                    <li>
+                        <fruits>
+                    </li>
+                    <li>
+                        <spices>
+                    </li>
+                    <li>
+                        <vegetables>
+                    </li>
+                </ul>
+            </div>
+            <a href="#"></a>
+            <div class="col-md-3" id="ingredients">
+                <span><a href="poignet .jpg" name="wrist"></a></span><span><h2>Ingredients</h2></span>
+                <div ng-repeat="dairyInDayries">{{dairy}}</div>
+                <div ng-repeat="meatInMeats">{{meats}}</div>
+                <div ng-repeat="fishInFishes">{{fish}}</div>
+                <div ng-repeat="fruitInFruits">{{fruit}}</div>
+                <div ng-repeat="spiceInSpices">{{spice}}</div>
+                <div ng-repeat="vegetableInVegetables">{{vegetable}}</div>
+            </div>
+        </div>
+        <div class="col-md-offset-2 col-md-4">
+            <h1>In My Fridge</h1>
+            <p>Quick way to find easily all recipes with your leftover food or ingredients.</p>
+            <form>
+                <div class="form-group">
+                    <input class="col-md-offset-4 col-md-6" ng-model type="text" class="form-control" placeholder="Choose your ingredients">
+                    <div ng-repeat="recipeInRecipes">{{}}</div>
+                </div>
+                <button type="submit" ng-click="openRecipes()" class="btn btn-primary">Submit</button>
+        </div>
     </div>
 </div>
