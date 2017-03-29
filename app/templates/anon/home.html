@@ -1,69 +1,51 @@
-<div class="container-fluid home">
-  <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6"></div>
-          <div class="col-md-3"></div>
-  </div>
-    <div class="container-fluid">
-
-
-        <form>
-            <div class="form-group">
-                <input class="col-md-offset-4 col-md-6" ng-model type="text" class="form-control" placeholder="Choose your ingredients">
-                <div ng-repeat="recipeInRecipes">{{}}</div>
-
-            </div>
-            <button type="submit" ng-click="openRecipes()" class="btn btn-primary">Submit</button>
-
-        </form>
-        <div class="row" id="fridge">
-            <div class="col-md-3" id="categories">
+<div class="container-fluid home" id="main">
+    <div class="row">
+        <div class="col-xs-3 text-center" id="fridge">
+            <div class="categories">
 
                 <h2>Category</h2>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" src="img/Milk-icon.svg" alt=""></a>
+                        <p>Dairy</p>
+                    </div>
 
-                <ul class="icones-top">
-                    <li>
-                        <a href="icone milk .jpg" ng-model="dairy" </a></li>
-                    <li>
-                        <a href="icone viande .jpg" ng-model="meats" </a></li>
-                    <li>
-                        <a href="icone fish .jpg" ng-model="fish" </a></li>
-                </ul>
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" src="img/Meat-icon.svg" alt=""></a>
+                        <p>Meats</p>
+                    </div>
 
-                <ul class="title-top">
-                    <li>
-                        <dairy</li>
-                            <li>
-                                <meats</li>
-                                    <li>
-                                        <fish</li>
-                </ul>
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" src="img/Fish-icon.svg" alt=""></a>
+                        <p>Fish</p>
+                    </div>
+                </div>
 
-                <ul class="icones-bottom">
-                    <li>
-                        <a href="icone strawberry .jpg" ng-model="fruits" </a></li>
-                    <li>
-                        <a href="icone pepper .jpg" ng-model="spices" </a></li>
-                    <li>
-                        <a href="icone tomatoes .jpg" ng-model="vegetables" </a></li>
-                </ul>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" src="img/Strawberry-icon.svg" alt=""></a>
+                        <p>Fruits</p>
+                    </div>
 
-                <ul class="title-bottom">
-                    <li>
-                        <fruits>
-                    </li>
-                    <li>
-                        <spices>
-                    </li>
-                    <li>
-                        <vegetables>
-                    </li>
-                </ul>
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" src="img/Kettle-icon.svg" alt=""></a>
+                        <p>Spices</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" src="img/Tomato-icon.svg" alt=""></a>
+                        <p>Vegetables</p>
+                    </div>
+                </div>
+
             </div>
-            <a href="#"></a>
-            <div class="col-md-3" id="ingredients">
-                <span><a href="poignet .jpg" name="wrist"></a></span><span><h2>Ingredients</h2></span>
-                <div ng-repeat="dairyInDayries">{{dairy}}</div>
+
+            <div class="ingredients">
+
+                <a href="wrist"><img class="wrist" src="img/poignet.png" alt=""></a>
+                <h2>Ingredients</h2>
+                <p>Ut termino omnium Montium vocabulis ob vocabulis futurae Epigonus ut ut oppressi Montium ipso ob igitur futurae Epigonus Montium sub enim Epigonus fabricarum omnium his vocabulis ut statuuntur tribunos molitioni.</p>
+                <div ng-repeat="dairyInDairies">{{dairy}}</div>
                 <div ng-repeat="meatInMeats">{{meats}}</div>
                 <div ng-repeat="fishInFishes">{{fish}}</div>
                 <div ng-repeat="fruitInFruits">{{fruit}}</div>
@@ -71,15 +53,144 @@
                 <div ng-repeat="vegetableInVegetables">{{vegetable}}</div>
             </div>
         </div>
-        <div class="col-md-offset-2 col-md-4">
-            <h1>In My Fridge</h1>
+
+
+        <div class="col-xs-6 search text-center" style="font-size:33px">
+
+            <h1 class="title-font">In My Fridge</h1>
             <p>Quick way to find easily all recipes with your leftover food or ingredients.</p>
             <form>
+              <div class="row">
+                <div class="col-xs-offset-2 col-xs-8">
                 <div class="form-group">
-                    <input class="col-md-offset-4 col-md-6" ng-model type="text" class="form-control" placeholder="Choose your ingredients">
+                    <input type="text" class="form-control" placeholder="">
                     <div ng-repeat="recipeInRecipes">{{}}</div>
+                  </div>
+                  </div>
                 </div>
-                <button type="submit" ng-click="openRecipes()" class="btn btn-primary">Submit</button>
+                <button type="submit" ng-click="openRecipes()" class="btn btn-primary">Find Recipes</button></form>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-3 rightside">
+                <div class="row first" style="background-color:#0E9EFF">
+
+                    <div class="col-xs-3">
+
+                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
+                    </div>
+
+                    <div class="col-xs-9">
+
+                        <div class="col-xs-12 desciption text-center ">
+                            <p>Cajun Chicken Pasta</p>
+                        </div>
+
+                        <div class="col-xs-12 description text-center">
+                            <p>The Pioneer Woman</p>
+                        </div>
+
+                        <div class="col-xs-offset-4 col-xs-2">
+                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-2">
+                            <div class=""><i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row second" style="background-color:orange">
+                    <div class="col-xs-3">
+
+                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
+
+                    </div>
+
+                    <div class="col-xs-9">
+
+                        <div class="col-xs-12 desciption text-center ">
+                            <p>Cajun Chicken Pasta</p>
+                        </div>
+                        <div class="col-xs-12 description text-center">
+                            <p>The Pioneer Woman</p>
+                        </div>
+                        <div class="col-xs-offset-4 col-xs-2">
+                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class=""><i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row third" style="background-color:maroon">
+
+                    <div class="col-xs-3">
+
+                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
+
+                    </div>
+
+                    <div class="col-xs-9">
+
+                        <div class="col-xs-12 desciption text-center">
+
+                            <p>Cajun Chicken Pasta</p>
+                        </div>
+
+                        <div class="col-xs-12 description text-center">
+                            <p>The Pioneer Woman</p>
+                        </div>
+
+                        <div class="col-xs-offset-4 col-xs-2">
+                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class=""><i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row fourth" style="background-color:purple">
+
+                    <div class="col-xs-3">
+
+                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
+                    </div>
+
+                    <div class="col-xs-9">
+
+                        <div class="col-xs-12 desciption text-center ">
+                            <p>Cajun Chicken Pasta</p>
+                        </div>
+
+                        <div class="col-xs-12 description text-center">
+                            <p>The Pioneer Woman</p>
+                        </div>
+
+                        <div class="col-xs-offset-4 col-xs-2">
+                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                            </div>
+
+                        </div>
+                        <div class="col-xs-2">
+                            <div class=""><i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i></div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
 </div>

@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "ChalkboardSE";
+    src: url('/fonts/ChalkboardSE-Regular.ttf');
+}
 /* Navbar */
 
 .navbar {
@@ -59,13 +63,76 @@ a.text-logo {
 
 /* Home  */
 
-.home {
+
+body{
+  
+    font-family: 'ChalkboardSE', cursive;
     background-image: url(/img/home-background.jpg);
-    background-size: 100vw;
     background-repeat: no-repeat;
-    height: 10em;
+
 }
 
-.row {
-    height: 600px;
+h2{
+  margin-top: 8px;
+
+}
+.form-control{
+  height: 50px;
+  opacity: 0.5;
+}
+
+.search{
+  margin-top: 120px;
+  color: white;
+}
+.categories{
+  font-size: 1.7em;
+}
+.ingredients{
+  font-size: 1.7em;
+  margin-bottom: 50px;
+  border-width: medium;
+  border-top: 4px solid
+}
+.wrist{
+  width: 19%;
+  float: left;
+  margin-top: 10px;
+}
+.icons{
+  width: 90%;
+}
+
+.photos{
+  float: left;
+  margin-right: 20px;
+}
+.first ,.second ,.third ,.fourth{
+  border: 3px solid grey;
+  border-radius: 5px;
+  padding-left: 5px;
+  margin-bottom: 70px;
+  margin-right: 5px;
+}
+.description{
+  font-size: 16px;
+}
+
+.rightside{
+  color: white;
+  float: right;
+
+}
+
+#main{
+
+  margin-top: 200px;
+}
+#fridge{
+  padding: 25px 30px 25px 30px;
+  margin-left: 2px;
+  background-color: white;
+  border-radius: 20px;
+  opacity: 0.7;
+
 }
