@@ -65,7 +65,7 @@ a.text-logo {
 
 
 body{
-  
+
     font-family: 'ChalkboardSE', cursive;
     background-image: url(/img/home-background.jpg);
     background-repeat: no-repeat;
@@ -95,25 +95,21 @@ h2{
   border-top: 4px solid
 }
 .wrist{
-  width: 19%;
+  width: 267%;
   float: left;
-  margin-top: 10px;
+  margin-top: 8px;
+
 }
+
 .icons{
   width: 90%;
 }
 
 .photos{
   float: left;
-  margin-right: 20px;
+  padding:1px 0 0 0;
 }
-.first ,.second ,.third ,.fourth{
-  border: 3px solid grey;
-  border-radius: 5px;
-  padding-left: 5px;
-  margin-bottom: 70px;
-  margin-right: 5px;
-}
+.
 .description{
   font-size: 16px;
 }
@@ -121,16 +117,23 @@ h2{
 .rightside{
   color: white;
   float: right;
+  margin-bottom: 35px;
 
 }
 
+.recipes{
+  border: 3px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 70px;
+  margin-right: 5px;
+}
 #main{
 
   margin-top: 200px;
 }
 #fridge{
   padding: 25px 30px 25px 30px;
-  margin-left: 2px;
   background-color: white;
   border-radius: 20px;
   opacity: 0.7;
