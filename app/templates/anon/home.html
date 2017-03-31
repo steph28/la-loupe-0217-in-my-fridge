@@ -1,7 +1,185 @@
-<div class="container-fluid home">
+<div class="container-fluid home" id="main">
     <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6"></div>
-        <div class="col-md-3"></div>
+        <div class="col-xs-12 col-sm-3 text-center" id="fridge">
+            <div class="categories">
+
+                <h2>Category</h2>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" src="img/Milk-icon.svg" onclick="selectCategory()" alt=""></a>
+                        <p>Dairy</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" src="img/Meat-icon.svg" onclick="selectCategory()" alt=""></a>
+                        <p>Meats</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" onclick="selectCategory()" src="img/Fish-icon.svg" alt=""></a>
+                        <p>Fish</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" onclick="selectCategory()" src="img/Strawberry-icon.svg" alt=""></a>
+                        <p>Fruits</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" onclick="selectCategory()" src="img/Kettle-icon.svg" alt=""></a>
+                        <p>Spices</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <a href="#"><img class="icons" onclick="selectCategory()" src="img/Tomato-icon.svg" alt=""></a>
+                        <p>Vegetables</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ingredients">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <img class="wrist" src="img/poignet.png" alt="">
+                    </div>
+                    <div class="col-xs-9">
+
+                        <h2>Ingredients</h2>
+                    </div>
+                </div>
+                <p>Ut termino omnium Montium vocabulis ob vocabulis futurae Epigonus ut ut oppressi Montium ipso ob igitur futurae Epigonus Montium sub enim Epigonus fabricarum omnium his vocabulis ut statuuntur tribunos molitioni.</p>
+                <div ng-repeat="dairy in dairies">{{dairy}}</div>
+                <div ng-repeat="meat in meats">{{meats}}</div>
+                <div ng-repeat="fish in fishes">{{fish}}</div>
+                <div ng-repeat="fruit in fruits">{{fruit}}</div>
+                <div ng-repeat="spice in spices">{{spice}}</div>
+                <div ng-repeat="vegetable in vegetables">{{vegetable}}</div>
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 search text-center" style="font-size:33px">
+
+            <h1 class="title-font">In My Fridge</h1>
+            <p>Quick way to find easily all recipes with your leftover food or ingredients.</p>
+            <form>
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-8">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="">
+                            <div ng-repeat="recipe in recipes">{{}}</div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" ng-click="repRecipes()" class="btn btn-primary">Find Recipes</button></form>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 rightside">
+
+                <div class="row recipes" style="background-color:#0E9EFF">
+
+                    <div class="col-xs-3 photos">
+
+                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
+                    </div>
+
+                    <div class="col-xs-9 text-center">
+                        <div class="">
+
+
+                            <p>Cajun Chicken Pasta</p>
+                            <p>The Pioneer Woman</p>
+
+                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row recipes" style="background-color:orange">
+                    <div class="col-xs-3 photos">
+
+                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
+
+                    </div>
+
+                    <div class="col-xs-9 text-center">
+                        <div class="">
+
+
+                            <p>Cajun Chicken Pasta</p>
+                            <p>The Pioneer Woman</p>
+
+                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row recipes" style="background-color:maroon">
+
+                    <div class="col-xs-3 photos">
+
+                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
+
+                    </div>
+
+                    <div class="col-xs-9 text-center">
+                        <div class="">
+
+
+                            <p>Cajun Chicken Pasta</p>
+                            <p>The Pioneer Woman</p>
+
+                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row recipes" style="background-color:purple">
+
+                    <div class="col-xs-3 photos">
+
+                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
+                    </div>
+
+                    <div class="col-xs-9 text-center">
+                        <div class="">
+
+
+                            <p>Cajun Chicken Pasta</p>
+                            <p>The Pioneer Woman</p>
+
+                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+              </div>
+            </div>
+
     </div>
 </div>
