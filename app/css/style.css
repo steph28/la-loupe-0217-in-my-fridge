@@ -101,6 +101,7 @@ body {
     font-family: 'ChalkboardSE', cursive;
     background-image: url(/img/home-background.jpg);
     background-repeat: no-repeat;
+    background-size: 100vw;
 }
 
 h2 {
