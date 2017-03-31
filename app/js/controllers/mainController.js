@@ -1,6 +1,26 @@
 angular.module('app')
     .controller('MainController', function($scope, recipeService) {
 
+      $scope.errors = [];
+
+      $scope.login = function() {
+          if ($scope.loginForm.$valid) {
+              $scope.errors = [];
+              Auth.login($scope.user).then(function(result) {
+                  $state.go('user.profile');
+              }).catch(function(err) {
+                  $scope.errors.push(err);
+              });
+          }
+      };
+
+      $scope.register = function() {
+          Auth.register($scope.user).then(function() {
+              $state.go('anon.home');
+          });
+      };
+
+
         $scope.meat = ['Bacon', 'Beef', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
         $scope.dairy = ['Cheddar', 'Mozzarella', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
         $scope.fish = ['Fish'];
