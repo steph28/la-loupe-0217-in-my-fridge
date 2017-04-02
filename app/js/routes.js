@@ -11,10 +11,11 @@ angular.module('app')
                         templateUrl: 'anon/navbar.html',
                         controller: 'NavbarController'
                     },
-                    'footer@':{
-                      templateUrl: 'anon/footer.html',
-                      controller: 'FooterController'
+                    'footer@': {
+                        templateUrl: 'anon/footer.html',
+                        controller: 'FooterController'
                     }
+
                 }
             })
             .state('anon.home', {
@@ -22,6 +23,15 @@ angular.module('app')
                 views: {
                     'content@': {
                         templateUrl: 'anon/home.html',
+                        controller: 'MainController'
+                    }
+                }
+            })
+            .state('anon.test', {
+                url: '/test',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/test.html',
                         controller: 'MainController'
                     }
                 }
@@ -35,9 +45,9 @@ angular.module('app')
                         templateUrl: 'user/navbar.html',
                         controller: 'NavbarController'
                     },
-                    'footer@':{
-                      templateUrl: 'anon/footer.html',
-                      controller: 'FooterController'
+                    'footer@': {
+                        templateUrl: 'anon/footer.html',
+                        controller: 'FooterController'
                     }
                 },
                 data: {
