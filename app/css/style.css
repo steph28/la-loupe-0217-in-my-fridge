@@ -8,6 +8,7 @@
     src: url('https://fonts.googleapis.com/css?family=Boogaloo');
 }
 
+
 /* Navbar */
 
 .navbar {
@@ -96,6 +97,10 @@ a.text-logo {
 .input-modal {
     opacity: 0.8!important;
     border: 1px solid rgba(93, 93, 93, 0.28)!important;
+}
+
+.modal-backdrop {
+    position: relative;
 }
 
 
@@ -287,6 +292,7 @@ footer ul {
     -webkit-box-shadow: 2px 3px 10px rgba(72, 72, 72, 0.85);
     box-shadow: 2px 3px 10px rgba(72, 72, 72, 0.85);
 }
+
 input[type="file"] {
     display: inline-flex;
 }
