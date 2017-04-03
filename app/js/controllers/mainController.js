@@ -20,42 +20,50 @@ angular.module('app')
           });
       };
 
-
-        $scope.meat = ['Bacon', 'Beef', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
-        $scope.dairy = ['Cheddar', 'Mozzarella', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
-        $scope.fish = ['Fish'];
-        $scope.fruits = ['Fruits'];
-        $scope.spices = ['Spices'];
+$scope.selected = '';
+        $scope.meat = [{meat:'Bacon'},{meat:'Beef'} , {meat:'Breast'}, {meat:'Bushmeat'},{meat:'Chicken' } ,{meat:'Chorizo' } ,{meat:'Duck'} , {meat:'Goose'},{meat:'Ground'},{meat:'Ham'},{meat:'Mutton'}, {meat:'Pepperoni'},{meat:'Pork'},{meat:'Poultry'},{meat:'Quail'},{meat:'Rabbit'},{meat:'Sausage cooked'},{meat:'Turkey'},{meat:'Veal'},{meat:'Venison'},{meat:'Wild boar'}];
+        $scope.dairy = [{dairy:'Cheddar'},{dairy:'Mozzarella'}, 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
+        $scope.fish = [{fish:'salmon'}];
+        $scope.fruits = [{fruits:'orange'},{fruits:'banana'},{fruits:'strawberry'}];
+        $scope.spices = [{spices:'pepper'}];
         $scope.vegetables = ['Vegetables'];
 
-        $scope.ingredients = $scope.dairy;
+        $scope.ingredients = $scope.meat;
 
 
-
-        // $scope.recipe1 = "";
-        $scope.showrecipe1 = function () {
-          recipeService.getOne().then(function(res) {
+var selected = '';
+  $scope.recipes = [];
+        $scope.showRecipe1 = function () {
+          recipeService.getSearch($scope.selected).then(function(res) {
             var i = 0;
-            i = (Math.ceil(Math.random()*4));
-            $scope.image = (res.data.recipes.image_url);
-            $scope.title = (res.data.recipes.title);
-            $scope.source = (res.data.recipes.source_url);
+            // for (var i = 0; i < 11; i++);
+            $scope.image = (res.data.recipes[i].image_url);
+            $scope.title = (res.data.recipes[i].title);
+            $scope.site = (res.data.recipes[i].publisher_url);
+            $scope.source = (res.data.recipes[i].source_url);
+            console.log(res.data.recipes);
 
           });
 
 
         };
-        $scope.showrecipe = function () {
+        $scope.showRecipe1();
+
+        $scope.showRecipe = function () {
           var i = 0;
-          i = (Math.ceil(Math.random()*8));
-        recipeService.getAll().then(function(res) {
-          $scope.image = (res.data.recipes.image_url);
-          $scope.title = (res.data.recipes.title);
-          $scope.source = (res.data.recipes.source_url);
-          console.log(res.data);
+
+        recipeService.getAll($scope.selected).then(function(res) {
+
+          $scope.image = (res.data.recipes[i].image_url);
+          $scope.title = (res.data.recipes[i].title);
+          $scope.site = (res.data.recipes[i].publisher_url);
+          $scope.source = (res.data.recipes[i].source_url);
+          console.log(res.data.recipes);
+          $scope.recipes = res.data.recipes;
         });
 
       };
+      $scope.showRecipe();
     });
 
 

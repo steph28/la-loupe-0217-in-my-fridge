@@ -92,7 +92,7 @@
 
               <ul >
 
-                <li ng-repeat="ingredient in ingredients" class="ingredient">{{ingredient}}</li>
+                <li ng-repeat="ingredient in ingredients" class="ingredient" ng-click="addSelected(ingredient)">{{ingredient.meat}} </li>
               </ul>
 
 
@@ -109,13 +109,13 @@
             <form>
                 <div class="row">
                     <div class="col-xs-offset-2 col-xs-8">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="">
-                            <div ng-repeat="recipe in recipes">{{}}</div>
+                        <div class="form ng-submit">
+                            <input type="text" class="form-control" placeholder="" ng-model='selected'>
+                            <div ng-repeat="ingredient in recipes">{{}}</div>
                         </div>
                     </div>
                 </div>
-                <button type="submit" ng-click="repRecipes()" class="btn btn-primary">Find Recipes</button></form>
+                <button type="submit" ng-click="showRecipe1()" class="btn btn-primary">Find Recipes</button><a ui-sref="anon.test"></form>
         </div>
 
         <div class="col-xs-12 col-sm-3 rightside">
@@ -124,15 +124,15 @@
 
                     <div class="col-xs-3 photos">
 
-                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
+                        <a href="#"><img class="photos" src="{{image}}" alt=""></a>
                     </div>
 
                     <div class="col-xs-9 text-center">
                         <div class="">
 
 
-                            <p>Cajun Chicken Pasta</p>
-                            <p>The Pioneer Woman</p>
+                            <p>{{title}}</p>
+                            <p>{{site}}</p>
 
                             <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
                                 <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
@@ -156,8 +156,8 @@
                         <div class="">
 
 
-                            <p>Cajun Chicken Pasta</p>
-                            <p>The Pioneer Woman</p>
+                          <p>{{title}}</p>
+                          <p>{{site}}</p>
 
                             <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
                                 <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
@@ -182,8 +182,8 @@
                         <div class="">
 
 
-                            <p>Cajun Chicken Pasta</p>
-                            <p>The Pioneer Woman</p>
+                          <p>{{title}}</p>
+                          <p>{{site}}</p>
 
                             <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
                                 <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
@@ -206,8 +206,8 @@
                         <div class="">
 
 
-                            <p>Cajun Chicken Pasta</p>
-                            <p>The Pioneer Woman</p>
+                          <p>{{title}}</p>
+                          <p>{{site}}</p>
 
                             <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
                                 <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
