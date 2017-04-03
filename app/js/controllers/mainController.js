@@ -1,6 +1,5 @@
 angular.module('app')
     .controller('MainController', function($scope, recipeService, $state, Auth) {
-
       $scope.errors = [];
 
       $scope.login = function() {
