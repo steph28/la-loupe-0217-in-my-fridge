@@ -296,3 +296,41 @@ footer ul {
 input[type="file"] {
     display: inline-flex;
 }
+
+/****Dashboard****/
+.dashb {
+  min-height: 100vh;
+  background-image: url(/img/legumes-2_preview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.dashc {
+  min-height: 30vh;
+  width: auto;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.thbimg {
+margin-top: 2vh;
+background-size: contain;
+}
+
+.Cook {
+  font-size: 6.5em;
+}
+.Thubmnail {
+  margin top: 2vh
+}
+img.thbimg {
+    width: 100%;
+}
+i {
+  margin-left: 0.2em;
+margin-right:  0.2em;
+}
+.pb {
+  margin-bottom: 5em;
+}
+a.thumbnail {
+  color: black;
+}
