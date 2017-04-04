@@ -26,16 +26,8 @@ angular.module('app')
                         controller: 'MainController'
                     }
                 }
-            })
-            .state('anon.test', {
-                url: '/test',
-                views: {
-                    'content@': {
-                        templateUrl: 'anon/test.html',
-                        controller: 'MainController'
-                    }
-                }
             });
+
         $stateProvider
             .state('user', {
                 abstract: true,
