@@ -201,12 +201,20 @@
 </head> -->
 
 <div class="container-fluid" id="main">
-<div class="row">
-<div class="col-xs-12">
-  <h1>JUST COOK IT!</h1>
-</div>
-</div>
-<div class="row">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>JUST COOK IT!</h1>
+        </div>
+    </div>
+
+    <div class=""ng-repeat= "recipe in recipes">
+      <img src="{{image}}" alt="">
+      <p>{{title}}</p>
+      <p>{{site}}</p><!-- <div>{{image}}</div> -->
+
+
+    </div>
+    <!-- <div class="row">
   <div class="col-xs-offset-1 col-xs-2 window">
 
     <i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
@@ -238,5 +246,5 @@
   </div>
 
 
-</div>
+</div> -->
 </div>

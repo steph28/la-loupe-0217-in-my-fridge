@@ -45,34 +45,34 @@
               <h2>Category</h2>
               <div class="row">
                   <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=dairy" src="img/Milk-icon.svg" alt=""></a>
+                      <a href=""><img class="icons" ng-click="category(0)" src="img/Milk-icon.svg" alt=""></a>
                       <p>Dairy</p>
                   </div>
 
                   <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=meat"src="img/Meat-icon.svg"  alt=""></a>
+                      <a href=""><img class="icons" ng-click="category(1)" src="img/Meat-icon.svg"  alt=""></a>
                       <p>Meats</p>
                   </div>
 
                   <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=fish" src="img/Fish-icon.svg" alt=""></a>
+                      <a href=""><img class="icons" ng-click="category(2)" src="img/Fish-icon.svg" alt=""></a>
                       <p>Fish</p>
                   </div>
               </div>
 
               <div class="row">
                   <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=fruits" src="img/Strawberry-icon.svg" alt=""></a>
+                      <a href=""><img class="icons" ng-click="category(3)" src="img/Strawberry-icon.svg" alt=""></a>
                       <p>Fruits</p>
                   </div>
 
                   <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=spices" src="img/Kettle-icon.svg" alt=""></a>
+                      <a href=""><img class="icons" ng-click="category(4)" src="img/Kettle-icon.svg" alt=""></a>
                       <p>Spices</p>
                   </div>
 
                   <div class="col-xs-4">
-                      <a href=""><img class="icons" ng-click="ingredients=vegetables" src="img/Tomato-icon.svg" alt=""></a>
+                      <a href=""><img class="icons" ng-click="category(5)" src="img/Tomato-icon.svg" alt=""></a>
                       <p>Vegetables</p>
                   </div>
               </div>
@@ -92,7 +92,7 @@
 
               <ul >
 
-                <li ng-repeat="ingredient in ingredients" class="ingredient" ng-click="addSelected(ingredient)">{{ingredient.meat}} </li>
+                <li ng-repeat="ingredient in ingredients" class="ingredient" ng-click="category(ingredient)">{{ingredient}} </li>
               </ul>
 
 
@@ -115,24 +115,24 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" ng-click="showRecipe1()" class="btn btn-primary">Find Recipes</button><a ui-sref="anon.test"></form>
+                <button type="submit" ng-click="showRecipe1()" class="btn btn-primary">Find Recipes</button></form>
         </div>
 
         <div class="col-xs-12 col-sm-3 rightside">
 
-                <div class="row recipes" style="background-color:#0E9EFF">
+                <div class="row recipes" style="background-color:#0E9EFF" ng-repeat="data in datas">
 
                     <div class="col-xs-3 photos">
 
-                        <a href="#"><img class="photos" src="{{image}}" alt=""></a>
+                        <a href="#"><img class="photos" src="{{data.image_url}}" alt=""></a>
                     </div>
 
                     <div class="col-xs-9 text-center">
                         <div class="">
 
 
-                            <p>{{title}}</p>
-                            <p>{{site}}</p>
+                            <p>{{data.title}}</p>
+                            <p>{{data.publisher_url}}</p>
 
                             <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
                                 <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
@@ -145,7 +145,7 @@
                 </div>
 
 
-                <div class="row recipes" style="background-color:orange">
+                <!-- <div class="row recipes" style="background-color:orange">
                     <div class="col-xs-3 photos">
 
                         <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
@@ -217,7 +217,7 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
 
               </div>
             </div>
