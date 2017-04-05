@@ -102,6 +102,9 @@ a.text-logo {
 .modal-backdrop {
     position: relative;
 }
+.modal-open {
+    overflow: auto;
+}
 
 
 /* Home  */
