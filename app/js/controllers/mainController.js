@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('MainController', function($scope, recipeService) {
+    .controller('MainController', function($scope, $location, recipeService) {
 
         $scope.errors = [];
 
@@ -22,18 +22,25 @@ angular.module('app')
         $scope.addSelected = "";
         $scope.selected = '';
 
-        function choose(nb) {
-            var table = [$scope.dairy, $scope.meat, $scope.fish, $scope.fruits, $scope.spices, $scope.vegetables];
+        $scope.show = function (name) {
+          $scope.selected = $scope.selected + ' ' + name;
 
-            $scope.dairy = ['Cheddar', 'Mozzarella', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
-            $scope.meat = ['Bacon', 'Beef', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
-            $scope.fish = ['salmon'];
-            $scope.fruits = ['orange', 'banana', 'strawberry'];
-            $scope.spices = ['pepper'];
-            $scope.vegetables = ['potatoes'];
-            console.log(table);
-            $scope.ingredients = table[nb];
-        }
+        };
+
+
+        $scope.category = function(nb){
+          var table = [$scope.dairy,$scope.meat, $scope.fish,$scope.fruits, $scope.spices, $scope.vegetables];
+
+        $scope.dairy = ['Cheddar', 'Mozzarella', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
+        $scope.meat = ['Bacon', 'Beef', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
+        $scope.fish = ['salmon'];
+        $scope.fruits = [ 'orange', 'banana', 'strawberry'];
+        $scope.spices = [ 'pepper'];
+        $scope.vegetables =['potatoes'];
+// console.log(res.data.recipes);
+// $scope.datas = res.data.recipes;
+        $scope.ingredients = table[nb];
+      };
 
 
 
@@ -45,8 +52,6 @@ angular.module('app')
                 console.log(res.data.recipes);
                 $scope.datas = res.data.recipes;
 
-                // $location.path("/test");
-
             });
 
 
@@ -54,7 +59,7 @@ angular.module('app')
 
 
         $scope.showRecipe = function() {
-            recipeService.getAll($scope.selected).then(function(res) {
+          recipeService.getAll($scope.selected).then(function(res){
 
                 console.log(res.data.recipes);
                 $scope.datas = res.data.recipes;
