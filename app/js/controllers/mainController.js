@@ -1,7 +1,7 @@
 angular.module('app')
-    .controller('MainController', function($scope, $location, recipeService) {
-
+    .controller('MainController', function($scope, recipeService, $state, Auth) {
         $scope.errors = [];
+
 
         $scope.login = function() {
             if ($scope.loginForm.$valid) {
@@ -22,25 +22,25 @@ angular.module('app')
         $scope.addSelected = "";
         $scope.selected = '';
 
-        $scope.show = function (name) {
-          $scope.selected = $scope.selected + ' ' + name;
+        $scope.show = function(name) {
+            $scope.selected = $scope.selected + ' ' + name;
 
         };
 
 
-        $scope.category = function(nb){
-          var table = [$scope.dairy,$scope.meat, $scope.fish,$scope.fruits, $scope.spices, $scope.vegetables];
+        $scope.category = function(nb) {
+            var table = [$scope.dairy, $scope.meat, $scope.fish, $scope.fruits, $scope.spices, $scope.vegetables];
 
-        $scope.dairy = ['Cheddar', 'Mozzarella', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
-        $scope.meat = ['Bacon', 'Beef', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
-        $scope.fish = ['salmon'];
-        $scope.fruits = [ 'orange', 'banana', 'strawberry'];
-        $scope.spices = [ 'pepper'];
-        $scope.vegetables =['potatoes'];
-// console.log(res.data.recipes);
-// $scope.datas = res.data.recipes;
-        $scope.ingredients = table[nb];
-      };
+            $scope.dairy = ['Cheddar', 'Mozzarella', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
+            $scope.meat = ['Bacon', 'Beef', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
+            $scope.fish = ['salmon'];
+            $scope.fruits = ['orange', 'banana', 'strawberry'];
+            $scope.spices = ['pepper'];
+            $scope.vegetables = ['potatoes'];
+            // console.log(res.data.recipes);
+            // $scope.datas = res.data.recipes;
+            $scope.ingredients = table[nb];
+        };
 
 
 
@@ -59,7 +59,7 @@ angular.module('app')
 
 
         $scope.showRecipe = function() {
-          recipeService.getAll($scope.selected).then(function(res){
+            recipeService.getAll($scope.selected).then(function(res) {
 
                 console.log(res.data.recipes);
                 $scope.datas = res.data.recipes;
