@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('MainController', function($scope, $location, recipeService) {
+    .controller('MainController', function($scope, recipeService, $state, Auth) {
 
         $scope.errors = [];
 
