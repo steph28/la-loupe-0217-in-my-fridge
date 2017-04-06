@@ -46,16 +46,16 @@ angular.module('app')
             recipeService.getSearch($scope.selected).then(function(res) {
 
 
-                console.log(res.data.recipes);
                 $scope.datas = res.data.recipes;
+                console.log($scope.datas);
             });
         };
 
         $scope.showRecipe = function() {
             recipeService.getAll($scope.selected).then(function(res) {
 
-                // console.log(res.data.recipes);
                 $scope.datas = res.data.recipes;
+                // console.log($scope.datas);
 
             });
 
@@ -65,6 +65,7 @@ angular.module('app')
         $scope.change = function () {
           recipeService.getSearch($scope.selected).then(function(res) {
               $scope.datas = res.data.recipes;
+              console.log($scope.datas);
           });
 
         };
