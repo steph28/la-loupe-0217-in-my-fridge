@@ -102,6 +102,7 @@ a.text-logo {
 .modal-backdrop {
     position: relative;
 }
+
 .modal-open {
     overflow: auto;
 }
@@ -120,6 +121,11 @@ a.text-logo {
 h2 {
     margin-top: 8px;
 }
+
+.title-home {
+    font-size: 2em;
+}
+
 space:after {
     content: ' ';
 }
@@ -137,21 +143,28 @@ space:after {
     vertical-align: baseline;
     border-radius: .25em;
 }
+
 .span-ingredients:hover {
     background-color: #af3900;
 }
+
 .form-control {
     height: 50px;
     opacity: 0.5;
     border: 1px solid #5d5d5d;
+    font-size: 20px;
 }
 
 .search {
-    margin-top: 120px;
+    margin-top: 1em;
     color: white;
 }
 
 .categories {
+    font-size: 1.5em;
+}
+
+.categories h2 {
     font-size: 1.7em;
 }
 
@@ -161,17 +174,25 @@ space:after {
 }
 
 .ingredients {
-    font-size: 1.7em;
-    margin-bottom: 50px;
+    font-size: 1.5em;
+    /*margin-bottom: 50px;*/
     border-width: medium;
     border-top: 4px solid
 }
 
-.wrist {
-    width: 267%;
-    float: left;
-    margin-top: 8px;
+.ingredients h2 {
+    font-size: 1.7em;
 }
+
+.wrist {
+    background-image: url(/img/poignet.svg);
+    background-repeat: no-repeat;
+    background-size: 22%;
+    background-position: 0% 60%;
+    margin-bottom: 4%;
+}
+
+.vegetables {}
 
 .icons {
     width: 90%;
@@ -180,9 +201,51 @@ space:after {
 .photos {
     float: left;
     padding: 1px 0 0 0;
+    height: 8em;
+    width: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 3px 3px 6px 0 rgba(39, 39, 39, 0.7);
+    border-radius: 3px;
 }
 
-. .description {
+.left-pre-results {
+    padding: 0px;
+}
+
+.right-pre-results {
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+.title-pre-results {
+    font-size: 1.7em;
+    letter-spacing: 0.8px;
+    font-family: 'Boogaloo', cursive;
+    position: absolute;
+    text-shadow: 1px 2px 4px black;
+}
+
+.fa-fa-pre-results {
+    position: absolute;
+    right: 5%;
+    margin-top: 4.5em;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px 0 rgba(39, 39, 39, 0.7);
+    padding: 5px 10px;
+}
+
+.back-pre-results {
+    background-color: blueviolet;
+    padding: 0.5em;
+    border-radius: 3px;
+    box-shadow: 3px 3px 6px 0 rgba(39, 39, 39, 0.7);
+    margin-bottom: 2.5em;
+}
+
+.description {
     font-size: 16px;
 }
 
@@ -201,14 +264,48 @@ space:after {
 }
 
 #main {
-    padding-top:200px;
+    padding: 10em 3em 0em 3em;
 }
 
 #fridge {
-    padding: 25px 30px 25px 30px;
+    padding: 1em 2em 1em 2em;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
+    box-shadow: 3px 3px 6px 0 rgba(39, 39, 39, 0.7);
+    height: 50em;
+}
 
+.home-search {
+    margin-top: 2em;
+}
+
+.btn-find {
+    background-color: #8B47F7;
+    border-color: #8B47F7;
+    font-size: 1em;
+    padding: 0px 25px 5px 25px;
+    box-shadow: 3px 3px 6px 0 rgba(39, 39, 39, 0.7);
+    margin-top: 0.7em;
+}
+
+.btn-find:hover {
+    background-color: #5a2da2;
+    border-color: #8B47F7;
+}
+
+.btn-find:active {
+    background-color: #8B47F7;
+    border-color: #8B47F7;
+}
+
+.btn-find:active:focus {
+    background-color: #8B47F7;
+    border-color: #8B47F7;
+}
+
+.btn-find:focus {
+    background-color: #8B47F7;
+    border-color: #8B47F7;
 }
 
 
@@ -321,51 +418,64 @@ input[type="file"] {
     display: inline-flex;
 }
 
+
 /****Dashboard****/
+
 .fava {
-  background: #cb2d3e; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #cb2d3e , #ef473a); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #cb2d3e , #ef473a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 2em;
+    background: #cb2d3e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #cb2d3e, #ef473a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #cb2d3e, #ef473a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 2em;
 }
+
 .dashb {
-  min-height: 100vh;
-  background-image: url(/img/legumes-2_preview.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+    min-height: 100vh;
+    background-image: url(/img/legumes-2_preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .dashc {
-  min-height: 30vh;
-  width: auto;
-  height: auto;
-  background-color: rgba(255, 255, 255, 0.8);
+    min-height: 30vh;
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.8);
 }
+
 .thbimg {
-margin-top: 2vh;
-background-size: contain;
+    margin-top: 2vh;
+    background-size: contain;
 }
 
 .Cook {
-  margin-top: 0.5em;
-  margin-bottom: 2em;
-  font-size: 6.5em;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    font-size: 6.5em;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
 }
+
 .Thubmnail {
-  margin top: 2vh
+    margin top: 2vh
 }
+
 img.thbimg {
     width: 100%;
 }
+
 i {
-  margin-left: 0.2em;
-margin-right:  0.2em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
 }
+
 .pb {
-  margin-bottom: 5em;
+    margin-bottom: 5em;
 }
+
 a.thumbnail {
-  color: black;
+    color: black;
 }

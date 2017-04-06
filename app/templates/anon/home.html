@@ -39,47 +39,78 @@
 
     <div class="container-fluid home" id="main">
         <div class="row">
+<<<<<<< HEAD
             <div class="col-xs-12 col-sm-3 text-center" id="fridge">
+=======
+            <div class="col-sm-5 col-md-3 text-center" id="fridge">
+>>>>>>> newcss
                 <div class="categories">
 
                     <h2>Category</h2>
                     <div class="row">
+<<<<<<< HEAD
                         <div class="col-xs-4">
+=======
+                        <div class="col-xs-4 hvr-bounce-in">
+>>>>>>> newcss
                             <a href=""><img class="icons" ng-click="ingredients=dairy" src="img/Milk-icon.svg" alt=""></a>
                             <p>Dairy</p>
                         </div>
 
+<<<<<<< HEAD
                         <div class="col-xs-4">
+=======
+                        <div class="col-xs-4 hvr-bounce-in">
+>>>>>>> newcss
                             <a href=""><img class="icons" ng-click="ingredients=meat" src="img/Meat-icon.svg" alt=""></a>
                             <p>Meats</p>
                         </div>
 
+<<<<<<< HEAD
                         <div class="col-xs-4">
+=======
+                        <div class="col-xs-4 hvr-bounce-in">
+>>>>>>> newcss
                             <a href=""><img class="icons" ng-click="ingredients=fish" src="img/Fish-icon.svg" alt=""></a>
                             <p>Fish</p>
                         </div>
                     </div>
 
                     <div class="row">
+<<<<<<< HEAD
                         <div class="col-xs-4">
+=======
+                        <div class="col-xs-4 hvr-bounce-in">
+>>>>>>> newcss
                             <a href=""><img class="icons" ng-click="ingredients=fruits" src="img/Strawberry-icon.svg" alt=""></a>
                             <p>Fruits</p>
                         </div>
 
+<<<<<<< HEAD
                         <div class="col-xs-4">
+=======
+                        <div class="col-xs-4 hvr-bounce-in">
+>>>>>>> newcss
                             <a href=""><img class="icons" ng-click="ingredients=spices" src="img/Kettle-icon.svg" alt=""></a>
                             <p>Spices</p>
                         </div>
 
+<<<<<<< HEAD
                         <div class="col-xs-4">
                             <a href=""><img class="icons" ng-click="ingredients=vegetables" src="img/Tomato-icon.svg" alt=""></a>
                             <p>Vegetables</p>
+=======
+                        <div class="col-xs-4 hvr-bounce-in">
+                            <a href=""><img class="icons" ng-click="ingredients=vegetables" src="img/Tomato-icon.svg" alt=""></a>
+                            <p class="vegetables">Vegetables</p>
+>>>>>>> newcss
                         </div>
                     </div>
 
                 </div>
 
                 <div class="ingredients">
+<<<<<<< HEAD
                     <div class="row">
                         <div class="col-xs-2">
                             <img class="wrist" src="img/poignet.png" alt="">
@@ -108,11 +139,36 @@
                 <form>
                     <div class="row">
                         <div class="col-xs-offset-2 col-xs-8">
+=======
+                    <div class="row wrist">
+                        <div class="col-xs-12">
+                            <h2>Ingredients</h2>
+                        </div>
+                    </div>
+
+                    <div class="bloc-ingredients">
+                        <span ng-repeat="ingredient in ingredients" ng-class="{space:!$last}">
+                                    <a href=""><span class="span-ingredients hvr-glow" ng-click="show(ingredient)">{{ingredient}}</span></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-6 search text-center" style="font-size:33px">
+
+                <h1 class="title-font">In My Fridge</h1>
+                <p>Quick way to find easily all recipes with your leftover food or ingredients.</p>
+                <form class="home-search">
+                    <div class="row">
+                        <div class="col-xs-offset-1 col-xs-10">
+>>>>>>> newcss
                             <div class="form ng-submit">
                                 <input type="text" class="form-control" placeholder="" ng-model='selected'>
                                 <!-- <div ng-repeat="ingredient in recipes">{{}}</div> -->
                             </div>
                         </div>
+<<<<<<< HEAD
                     </div>
                     <button type="submit" ng-click="showRecipe1()" class="btn btn-primary">Find Recipes</button></form>
             </div>
@@ -124,8 +180,13 @@
                     <div class="col-xs-3 photos">
 
                         <a href="#"><img class="photos" src="{{data.image_url}}" alt=""></a>
+=======
+>>>>>>> newcss
                     </div>
+                    <button type="submit" ng-click="showRecipe1()" class="btn btn-primary btn-find">Find Recipes</button></form>
+            </div>
 
+<<<<<<< HEAD
                     <div class="col-xs-9 text-center">
                         <div class="">
 
@@ -135,14 +196,29 @@
 
                             <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
                                 <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
-                            </div>
-
-
+=======
+            <div class="col-xs-12 col-sm-3 rightside">
+                <div ng-repeat="data in datas">
+                    <div class="row back-pre-results fadeIn animated">
+                        <div class="left-pre-results">
+                            <a href="#" class="photos" style="background-image: url({{data.image_url}});"></a>
                         </div>
-
+                        <div class="right-pre-results">
+                            <div class="">
+                                <p class="title-pre-results">{{data.title}}</p>
+                                <!-- <p>{{data.publisher_url}}</p> -->
+                                <div class="fa-fa-pre-results">
+                                    <i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                                    <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
+                                </div>
+>>>>>>> newcss
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
+<<<<<<< HEAD
             </div>
         </div>
 
@@ -153,6 +229,16 @@
 <div class="container-fluid fava">
     <h3 class="text-center title-font Cook policecolor">My favorites recipes!</h3>
 
+=======
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid fava">
+    <h3 class="text-center title-font Cook policecolor">Just Cook It !</h3>
+
+>>>>>>> newcss
     <div class="row fava">
         <div class="col-xs-3">
             <div class="thumbnail">
