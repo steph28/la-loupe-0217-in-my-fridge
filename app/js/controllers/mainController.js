@@ -1,5 +1,8 @@
 angular.module('app')
+
+
     .controller('MainController', function($scope, recipeService, $state, Auth) {
+
 
         $scope.errors = [];
 
@@ -19,7 +22,7 @@ angular.module('app')
                 $state.go('anon.home');
             });
         };
-        $scope.addSelected = "";
+
         $scope.selected = '';
 
         $scope.show = function(name) {
@@ -34,28 +37,18 @@ angular.module('app')
         $scope.spices = ['Basil', 'Ground Cumin', 'Salgon Cinnamon', 'Bay Leaves', 'Paprika', 'Thyme', 'Oregano', 'Red pepper', 'Chineses Spices', 'Curry', 'Mustard', 'Salt', 'Cajun', 'Ginger', 'Chili', 'Chive', 'Parsley', 'Shallot', 'Cloves', 'Chilli pepper', 'Nutmeg', 'Saffron', 'Mint'];
         $scope.vegetables = ['Garlic', 'Onion', 'Olive', 'Tomatoes', 'Potato', 'Salads greens', 'Carrot', 'Basil', 'Rosemary', 'Bell pepper', 'Corn', 'Ginger', 'Mushrooms', 'Broccoli', 'Spinach', 'Greens Beans', 'Celery', 'Pumpkin', 'Asparagus', 'Avogado', 'Cabbage', 'Zucchini', 'Cucumbers'];
 
-        $scope.ingredients = $scope.dairy;
-        // $scope.dairy = ['Cheddar', 'Mozzarella', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
-        // $scope.meat = ['Bacon', 'Beef', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
-        // $scope.fish = ['salmon'];
-        // $scope.fruits = [ 'orange', 'banana', 'strawberry'];
-        // $scope.spices = [ 'pepper'];
-        // $scope.vegetables =['potatoes'];
-        //
-        // $scope.ingredients = $scope.dairy;
+
+         $scope.ingredients = $scope.dairy;
 
 
-        $scope.recipes = [];
+        // $scope.recipes = [];
         $scope.showRecipe1 = function() {
             recipeService.getSearch($scope.selected).then(function(res) {
 
 
                 console.log(res.data.recipes);
                 $scope.datas = res.data.recipes;
-
             });
-
-
         };
 
 
@@ -69,4 +62,10 @@ angular.module('app')
 
         };
         $scope.showRecipe();
+
+
+        $scope.showDetail = function (id) {
+          $state.go('anon.detail', {id: id});
+        };
+
     });
