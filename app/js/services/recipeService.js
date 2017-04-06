@@ -3,13 +3,13 @@ angular.module('app')
 
         return {
           getSearch: function(x) {
-            return $http.get('http://food2fork.com/api/search?key=c12cb3dce103a4fd355d294ac6082e1b&count=4&q=' + x);
+            return $http.get('http://food2fork.com/api/search?key=e5e3f394c476f80a9f6b2a426d24c285&count=4&q=' + x);
             },
             getAll: function(x) {
-              return $http.get('http://food2fork.com/api/search?key=c12cb3dce103a4fd355d294ac6082e1b&count=4&q=' + x);
+              return $http.get('http://food2fork.com/api/search?key=e5e3f394c476f80a9f6b2a426d24c285&count=4&q=' + x);
             },
             getById: function(id) {
-              return $http.get('http://food2fork.com/api/get?key=c12cb3dce103a4fd355d294ac6082e1b&rId=' + id);
+              return $http.get('http://food2fork.com/api/get?key=e5e3f394c476f80a9f6b2a426d24c285&rId=' + id);
             },
           };
           });
