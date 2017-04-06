@@ -10,3 +10,6 @@ angular.module('app')
             },
             getById: function (id) {
               return $http.get('http://food2fork.com/api/get?key=c12cb3dce103a4fd355d294ac6082e1b&rId=' + id);
+            },
+          };
+          });
