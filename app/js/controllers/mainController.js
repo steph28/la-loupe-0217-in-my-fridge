@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('MainController', function($scope, $location, recipeService) {
+    .controller('MainController', function($scope, $state, recipeService) {
 
         $scope.errors = [];
 
@@ -19,7 +19,7 @@ angular.module('app')
                 $state.go('anon.home');
             });
         };
-        $scope.addSelected = "";
+
         $scope.selected = '';
 
         $scope.show = function (name) {
@@ -28,8 +28,6 @@ angular.module('app')
         };
 
 
-        // $scope.category = function(nb){
-        //   var table = [$scope.dairy,$scope.meat, $scope.fish,$scope.fruits, $scope.spices, $scope.vegetables];
 
         $scope.dairy = ['Cheddar', 'Mozzarella', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
         $scope.meat = ['Bacon', 'Beef', 'Breast', 'Bushmeat', 'Chicken', 'Chorizo', 'Duck', 'Goose', 'Ground', 'Ham', 'Mutton', 'Pepperoni', 'Pork', 'Poultry', 'Quail', 'Rabbit', 'Sausage cooked', 'Turkey', 'Veal', 'Venison', 'Wild boar'];
@@ -37,23 +35,18 @@ angular.module('app')
         $scope.fruits = [ 'orange', 'banana', 'strawberry'];
         $scope.spices = [ 'pepper'];
         $scope.vegetables =['potatoes'];
-// console.log(res.data.recipes);
-// $scope.datas = res.data.recipes;
+
 $scope.ingredients = $scope.dairy;
-      // };
 
 
-        $scope.recipes = [];
+        // $scope.recipes = [];
         $scope.showRecipe1 = function() {
             recipeService.getSearch($scope.selected).then(function(res) {
 
 
                 console.log(res.data.recipes);
                 $scope.datas = res.data.recipes;
-
             });
-
-
         };
 
 
@@ -67,4 +60,10 @@ $scope.ingredients = $scope.dairy;
 
         };
         $scope.showRecipe();
+
+
+        $scope.showDetail = function (id) {
+          $state.go('anon.detail', {id: id});
+        };
+
     });

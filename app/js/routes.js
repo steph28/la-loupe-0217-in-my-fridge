@@ -26,6 +26,15 @@ angular.module('app')
                         controller: 'MainController'
                     }
                 }
+            })
+            .state('anon.detail', {
+                url: '/detail/:id',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/detail.html',
+                        controller: 'DetailController'
+                    }
+                }
             });
 
         $stateProvider

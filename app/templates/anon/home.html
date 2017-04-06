@@ -144,79 +144,7 @@
                 </div>
 
 
-                <!-- <div class="row recipes" style="background-color:orange">
-                    <div class="col-xs-3 photos">
 
-                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
-
-                    </div>
-
-                    <div class="col-xs-9 text-center">
-                        <div class="">
-
-
-                          <p>{{title}}</p>
-                          <p>{{site}}</p>
-
-                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
-                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="row recipes" style="background-color:maroon">
-
-                    <div class="col-xs-3 photos">
-
-                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
-
-                    </div>
-
-                    <div class="col-xs-9 text-center">
-                        <div class="">
-
-
-                          <p>{{title}}</p>
-                          <p>{{site}}</p>
-
-                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
-                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="row recipes" style="background-color:purple">
-
-                    <div class="col-xs-3 photos">
-
-                        <a href="#"><img class="photos" src="img/cajun.jpg" alt=""></a>
-                    </div>
-
-                    <div class="col-xs-9 text-center">
-                        <div class="">
-
-
-                          <p>{{title}}</p>
-                          <p>{{site}}</p>
-
-                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
-                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div> -->
 
               </div>
             </div>
@@ -226,20 +154,20 @@
   </div>
   </div>
   <div class="container-fluid fava">
-      <h3 class="text-center title-font Cook policecolor">My favorites recipes!</h3>
+      <h3 class="text-center title-font Cook policecolor">Just Cook It!</h3>
 
-      <div class="row fava">
+      <div class="row fava" ng-repeat="data in datas">
           <div class="col-xs-3">
               <div class="thumbnail">
-                  <img class="thbimg" src="../img/scampi.jpg">
+                <a ng-click='showDetail(data.recipe_id)'><img class="thbimg" src="{{data.image_url}}"></a>
                   <div class="caption text-center">
-                      <h3>Scampi</h3>
+                      <h3>{{data.title}}</h3>
                       <a><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a><i style="color:black;" class="fa fa-heart fa-4x"></i><i  style="color:black;"class="fa fa-commenting fa-4x" aria-hidden="true"></i>
                   </div>
               </div>
 
           </div>
-          <div class="col-xs-3">
+          <!-- <div class="col-xs-3">
               <div class="thumbnail">
                   <img class="thbimg" src="../img/pesto.jpg">
                   <div class="caption text-center">
@@ -263,7 +191,7 @@
                   <div class="caption text-center">
                       <h3>Titre miniature</h3>
                       <a><i style="color:black;" class="fa fa-share-alt-square fa-4x"></i></a><i  style="color:black;"class="fa fa-heart fa-4x"></i><i style="color:black;" class="fa fa-commenting fa-4x" aria-hidden="true"></i> </div>
-              </div>
+              </div> -->
 
           </div>
       </div>
