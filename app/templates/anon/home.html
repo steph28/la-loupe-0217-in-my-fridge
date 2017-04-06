@@ -80,11 +80,11 @@
                 </div>
 
                 <div class="ingredients">
-                  <div class="row wrist">
-                    <div class="col-xs-12">
-                        <h2>Ingredients</h2>
+                    <div class="row wrist">
+                        <div class="col-xs-12">
+                            <h2>Ingredients</h2>
+                        </div>
                     </div>
-                  </div>
 
                     <div class="bloc-ingredients">
                         <span ng-repeat="ingredient in ingredients" ng-class="{space:!$last}">
@@ -112,40 +112,30 @@
             </div>
 
             <div class="col-xs-12 col-sm-3 rightside">
-
-                <div class="row recipes" style="background-color:#0E9EFF" ng-repeat="data in datas">
-
-                    <div class="col-xs-3 photos">
-
-                        <a href="#"><img class="photos" src="{{data.image_url}}" alt=""></a>
-                    </div>
-
-                    <div class="col-xs-9 text-center">
-                        <div class="">
-
-
-                            <p>{{data.title}}</p>
-                            <p>{{data.publisher_url}}</p>
-
-                            <div class=""><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
-                                <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
-                            </div>
-
-
+                <div ng-repeat="data in datas">
+                    <div class="row back-pre-results fadeIn animated">
+                        <div class="left-pre-results">
+                            <a href="#" class="photos" style="background-image: url({{data.image_url}});"></a>
                         </div>
-
+                        <div class="right-pre-results">
+                            <div class="">
+                                <p class="title-pre-results">{{data.title}}</p>
+                                <!-- <p>{{data.publisher_url}}</p> -->
+                                <div class="fa-fa-pre-results">
+                                    <i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                                    <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
-
             </div>
-        </div>
 
+        </div>
     </div>
 
 </div>
-</div>
+
 <div class="container-fluid fava">
     <h3 class="text-center title-font Cook policecolor">Just Cook It !</h3>
 
