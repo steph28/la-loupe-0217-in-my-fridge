@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" type="text/css" href="<%= css %>" media="all" />
     <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
-
+    <link rel="stylesheet" href="animate.min.css">
+    <link href="hover-min.css" rel="stylesheet">
 
 </head>
 
