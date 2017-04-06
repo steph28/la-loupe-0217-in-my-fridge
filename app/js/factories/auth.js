@@ -54,8 +54,11 @@ angular.module('app')
                     token = LocalService.get('auth_token');
                 }
                 if (token) {
+                  var regex = /food2fork.com/i;
+                  if (!regex.test(config.url)){
                     config.headers.authorization = token;
                 }
+              }
                 return config;
             },
             responseError: function(response) {
