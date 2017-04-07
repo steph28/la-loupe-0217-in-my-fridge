@@ -127,7 +127,7 @@
                                 <p class="title-pre-results">{{data.title}}</p>
                                 <!-- <p>{{data.publisher_url}}</p> -->
                                 <div class="fa-fa-pre-results">
-                                    <i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                                    <a ng-click="addfav(data.recipe_id)"><i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i></a>
                                     <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
                                 </div>
                             </div>
@@ -144,8 +144,11 @@
 
 
 
+
+
 <div class="container-fluid fava">
     <h3 class="text-center title-font Cook policecolor">Just Cook It!</h3>
+
 
     <div class="" ng-repeat="data in datas">
         <div class="col-sm-3 hvr-grow">

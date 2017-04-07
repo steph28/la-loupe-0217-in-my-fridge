@@ -1,11 +1,10 @@
 angular.module('app')
 
 
-    .controller('MainController', function($scope, recipeService, $state, Auth) {
-
-
+    .controller('MainController', function($scope,$sce, recipeService, $state, Auth, UserService, CurrentUser) {
+        var userId = CurrentUser.user()._id;
         $scope.errors = [];
-
+        $scope.url="";
         $scope.login = function() {
             if ($scope.loginForm.$valid) {
                 $scope.errors = [];
@@ -41,10 +40,9 @@ angular.module('app')
          $scope.ingredients = $scope.dairy;
 
 
-        // $scope.recipes = [];
+
         $scope.showRecipe1 = function() {
             recipeService.getSearch($scope.selected).then(function(res) {
-
 
                 $scope.datas = res.data.recipes;
                 console.log($scope.datas);
@@ -53,12 +51,9 @@ angular.module('app')
 
         $scope.showRecipe = function() {
             recipeService.getAll($scope.selected).then(function(res) {
-
                 $scope.datas = res.data.recipes;
-                // console.log($scope.datas);
 
             });
-
         };
         $scope.showRecipe();
 
@@ -72,6 +67,15 @@ angular.module('app')
 
         $scope.showDetail = function (id) {
           $state.go('anon.detail', {id: id});
+        };
+
+        $scope.addfav = function (recipeId) {
+          UserService.addFav(userId,recipeId).then(function(res){
+            console.log(res);
+          }, function (err) {
+
+          });
+
         };
 
     });

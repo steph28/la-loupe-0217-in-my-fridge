@@ -10,6 +10,9 @@ angular.module('app')
             update: function(id, user) {
                 return $http.put('/users/' + id, user);
             },
+            addFav: function(id, recipeId) {
+                return $http.put('/users/recipe/' + id, {recipeId: recipeId});
+            },
             delete: function(id) {
                 return $http.delete('/users/' + id);
             }
