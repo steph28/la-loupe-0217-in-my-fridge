@@ -252,6 +252,15 @@ space:after {
     box-shadow: 3px 3px 6px 0 rgba(39, 39, 39, 0.7);
     padding: 5px 10px;
 }
+.fa-fa-detail-results {
+    position: absolute;
+    right: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px 0 rgba(39, 39, 39, 0.7);
+    padding: 5px 10px;
+    bottom: 50px;
+}
 
 .back-pre-results {
     background-color: blueviolet;
