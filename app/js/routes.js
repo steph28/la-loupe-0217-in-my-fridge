@@ -36,7 +36,6 @@ angular.module('app')
                     }
                 }
             });
-
         $stateProvider
             .state('user', {
                 abstract: true,

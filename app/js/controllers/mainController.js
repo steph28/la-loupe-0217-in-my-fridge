@@ -43,16 +43,27 @@ angular.module('app')
 
         $scope.showRecipe1 = function() {
             recipeService.getSearch($scope.selected).then(function(res) {
+
                 $scope.datas = res.data.recipes;
+                console.log($scope.datas);
             });
         };
+
         $scope.showRecipe = function() {
             recipeService.getAll($scope.selected).then(function(res) {
                 $scope.datas = res.data.recipes;
+
             });
         };
         $scope.showRecipe();
 
+        $scope.change = function () {
+          recipeService.getSearch($scope.selected).then(function(res) {
+              $scope.datas = res.data.recipes;
+              console.log($scope.datas);
+          });
+
+        };
 
         $scope.showDetail = function (id) {
           $state.go('anon.detail', {id: id});
