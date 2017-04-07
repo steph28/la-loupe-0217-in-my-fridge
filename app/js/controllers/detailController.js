@@ -6,7 +6,6 @@ angular.module('app')
           console.log(res.data);
           $scope.recipe = res.data.recipe;
           $scope.ingredients = res.data.recipe.ingredients;
-
         });
 
     });
