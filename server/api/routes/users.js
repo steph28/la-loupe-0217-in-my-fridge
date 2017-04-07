@@ -20,6 +20,8 @@ module.exports = (app) => {
 
     router.post('/', user.create);
 
+    router.put('/recipe/:id', Auth.hasAuthorization, user.recipeUpdate);
+
     router.put('/:id', Auth.isAdministrator, user.update);
 
     router.delete('/:id', Auth.isAdministrator, user.delete);

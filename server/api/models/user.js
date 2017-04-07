@@ -31,7 +31,11 @@ const userSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false
-    }
+    },
+    liked:[{recipeId:{type: String}}]
+
+
+
 });
 
 userSchema.methods.comparePassword = function(pwd, cb) {
@@ -130,6 +134,17 @@ export default class User {
             });
     }
 
+    recipeUpdate(req, res) {
+        model.findByIdAndUpdate({
+            _id: req.params.id
+        },{$push:{liked:{recipeId: req.body.recipeId}}}, (err, user) => {
+            if (err || !user) {
+                res.status(500)
+            } else {
+                res.json(user);
+            }
+        });
+    }
     update(req, res) {
         model.update({
             _id: req.params.id
