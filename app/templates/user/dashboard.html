@@ -1,1 +1,57 @@
-Dashboard de {{user.email}}
+<div class="container-fluid dashb">
+    <h3 class="text-center title-font Cook policecolor">My Favorites Recipes !</h3>
+
+    <div class="row dashc">
+
+      <div class="col-sm-3 hvr-grow">
+          <div class="thumbnail text-center">
+              <!-- <a ng-click='showDetail(data.recipe_id)'><img class="thbimg" src="{{data.image_url}}"></a> -->
+              <a ng-click='showDetail(data.recipe_id)' class="img-results" style="background-image: url({{data.image_url}});"></a>
+              <h3>{{data.title}}</h3>
+              <div class="caption text-center absolute">
+                  <a href="#"><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a>
+                  <a href="#"><i style="color:black;" class="fa fa-heart fa-4x"></i></a>
+                  <a href="#"><i  style="color:black;"class="fa fa-commenting fa-4x" aria-hidden="true"></i></a>
+              </div>
+          </div>
+      </div>
+<!--
+        <div class="col-xs-3">
+            <div class="thumbnail">
+                <img class="thbimg" src="../img/scampi.jpg">
+                <div class="caption text-center">
+                    <h3>Scampi</h3>
+                    <a><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a><i style="color:black;" class="fa fa-heart fa-4x"></i><i  style="color:black;"class="fa fa-commenting fa-4x" aria-hidden="true"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-3">
+            <div class="thumbnail">
+                <img class="thbimg" src="../img/pesto.jpg">
+                <div class="caption text-center">
+                    <h3>Pattes au saumons</h3>
+                    <a><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a><a><i  style="color:black;"class="fa fa-heart fa-4x"></i></a href="#"><a><i style="color:black;" class="fa fa-commenting fa-4x" aria-hidden="true"></i></a> </div>
+            </div>
+
+        </div>
+        <div class="col-xs-3">
+            <div class="thumbnail">
+                <img class="thbimg" src="../img/sandwich.jpg">
+                <div class="caption text-center">
+                    <h3>Titre miniature</h3>
+                    <a><i  style="color:black;"class="fa fa-share-alt-square fa-4x"></i></a><i  style="color:black;"class="fa fa-heart fa-4x"></i><i  style="color:black;"class="fa fa-commenting fa-4x" aria-hidden="true"></i> </div>
+            </div>
+
+        </div>
+        <div class="col-xs-3">
+            <div class="thumbnail">
+                <img class="thbimg" src="../img/cajun.jpg">
+                <div class="caption text-center">
+                    <h3>Titre miniature</h3>
+                    <a><i style="color:black;" class="fa fa-share-alt-square fa-4x"></i></a><i  style="color:black;"class="fa fa-heart fa-4x"></i><i style="color:black;" class="fa fa-commenting fa-4x" aria-hidden="true"></i> </div>
+            </div>
+
+        </div> -->
+    </div>
+</div>

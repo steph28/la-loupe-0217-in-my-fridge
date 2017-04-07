@@ -1,0 +1,30 @@
+
+<div class="container-fluid body-detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 animated fadeInLeft back-img-detail">
+                <a href="{{recipe.source_url}}" class="img-detail" style="background-image: url({{recipe.image_url}});"></a>
+
+                <div class="fa-fa-detail-results">
+                    <i class="fa fa-heart fa-2x" style="color:black" aria-hidden="true"></i>
+                    <i class="fa fa-comments fa-2x" style="color:black" aria-hidden="true"></i>
+                </div>
+
+            </div>
+            <div class="col-sm-7">
+                <div class="detail animated fadeInRight">
+                    <h1 class="title-font">{{recipe.title}}</h1>
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li ng-repeat=" ingredient in ingredients ">{{ingredient}}</li>
+                    </ul>
+                    <h2>Directions:</h2>
+                    <div class="">
+                        <a class="btn-detail" href="{{recipe.source_url}}">Visit Publisher Site</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
