@@ -93,7 +93,7 @@
 
                     <div class="bloc-ingredients">
                         <span ng-repeat="ingredient in ingredients" ng-class="{space:!$last}">
-                                    <a href=""><span class="span-ingredients hvr-glow" ng-click="show(ingredient)">{{ingredient}}</span></a>
+                                    <a href=""><span class="span-ingredients hvr-glow" ng-click="show(ingredient); change();showRecipe()">{{ingredient}}</span></a>
                         </span>
                     </div>
                 </div>
@@ -108,12 +108,12 @@
                     <div class="row">
                         <div class="col-xs-offset-1 col-xs-10">
                             <div class="form ng-submit">
-                                <input type="text" class="form-control" placeholder="" ng-model='selected'>
-                                <!-- <div ng-repeat="ingredient in recipes">{{}}</div> -->
+                                <input type="text" class="form-control" ng-change="change()" ng-model='selected' ng-model-options= '{debounce:200}' placeholder="" >
+                          <!-- ng-model-options permet de donner des options sur la façon de traiter le  model -->
                             </div>
                         </div>
                     </div>
-                    <button type="submit" ng-click="showRecipe1()" class="btn btn-primary btn-find">Find Recipes</button></form>
+                    <button type="submit" ng-click="showRecipe1()"class="btn btn-primary btn-find">Find Recipes</button></form>
             </div>
 
             <div class="col-xs-12 col-sm-3 rightside">
@@ -143,6 +143,7 @@
 
 
 
+
 <div class="container-fluid fava">
     <h3 class="text-center title-font Cook policecolor">Just Cook It!</h3>
 
@@ -161,3 +162,4 @@
         </div>
     </div>
 </div>
+
